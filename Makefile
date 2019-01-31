@@ -93,14 +93,13 @@ DLLs        = $(patsubst %, $(DistDir)/%, $(notdir DLLsToCopy))
 Fonts       = $(patsubst %, $(DistDir)/fonts/%, $(notdir FontsToCopy))
 #-------------------------------------------------------------------------------
 
-Objects  = $(BuildDir)/obj/main.o
-Objects += $(BuildDir)/obj/gui_main.o
-Objects += $(BuildDir)/obj/imgui/imgui.o
-Objects += $(BuildDir)/obj/imgui/misc/cpp/imgui_stdlib.o
-Objects += $(BuildDir)/obj/imgui/examples/imgui_impl_glfw.o
-Objects += $(BuildDir)/obj/imgui/examples/imgui_impl_opengl2.o
-Objects += $(BuildDir)/obj/imgui/imgui_draw.o
-Objects += $(BuildDir)/obj/imgui/imgui_widgets.o
+Sources  = main.cpp
+Sources += gui_main.cpp
+Sources += imgui/imgui.cpp imgui/imgui_draw.cpp imgui/imgui_widgets.cpp
+Sources += imgui/misc/cpp/imgui_stdlib.cpp
+Sources += imgui/examples/imgui_impl_glfw.cpp imgui/examples/imgui_impl_opengl2.cpp
+
+Objects = $(patsubst %.cpp,$(BuildDir)/obj/%.o, $(Sources))
 
 Headers  = *.hpp imgui/*.h imgui/examples/*.h imgui/misc/cpp/*.h
 #-------------------------------------------------------------------------------
