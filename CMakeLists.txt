@@ -11,3 +11,7 @@ target_sources(DSATestcasesRepo PRIVATE "imgui/misc/cpp/imgui_stdlib.cpp")
 target_sources(DSATestcasesRepo PRIVATE "imgui/examples/imgui_impl_glfw.cpp" "imgui/examples/imgui_impl_opengl2.cpp")
 target_include_directories(DSATestcasesRepo PRIVATE "imgui/" "imgui/examples" "imgui/misc/cpp")
 target_link_libraries(DSATestcasesRepo "glfw" "GL")
+
+add_subdirectory("cpr")
+include_directories(${CPR_INCLUDE_DIRS})
+target_link_libraries(DSATestcasesRepo ${CPR_LIBRARIES})
