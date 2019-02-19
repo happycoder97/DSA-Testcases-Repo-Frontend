@@ -10,3 +10,7 @@ lib
 *#
 *~
 imgui.ini
+build
+CPackConfig.cmake
+CPackSourceConfig.cmake
+compile_commands.json
