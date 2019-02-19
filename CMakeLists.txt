@@ -19,7 +19,7 @@ include_directories(${CPR_INCLUDE_DIRS})
 target_link_libraries(DSATestcasesRepo PRIVATE ${CPR_LIBRARIES})
 
 find_package(Threads REQUIRED)
-include("asyncplusplus/Async++.cmake")
+add_subdirectory("asyncplusplus")
 add_dependencies(DSATestcasesRepo Async++)
 target_link_libraries(DSATestcasesRepo PRIVATE Async++)
 
