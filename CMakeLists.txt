@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 add_executable(DSATestcasesRepo)
 set_target_properties(DSATestcasesRepo PROPERTIES
-    RUNTIME_OUTPUT_DIRECTORY "dist/linux/"
+    RUNTIME_OUTPUT_DIRECTORY "dist/"
 )
 target_sources(DSATestcasesRepo PRIVATE "src/gui_main.cpp" "src/main.cpp")
 target_sources(DSATestcasesRepo PRIVATE "src/login.cpp")
