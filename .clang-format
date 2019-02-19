@@ -1,0 +1,5 @@
+BreakBeforeBraces: Attach
+IndentWidth: 4
+SpaceBeforeParens: true
+MaxEmptyLinesToKeep: 2
+ColumnLimit: 80
