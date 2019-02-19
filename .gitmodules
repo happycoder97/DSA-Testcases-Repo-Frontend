@@ -5,3 +5,6 @@
 	path = cpr
 	url = https://github.com/whoshuu/cpr
 	ignore = untracked
+[submodule "asyncplusplus"]
+	path = asyncplusplus
+	url = https://github.com/Amanieu/asyncplusplus
