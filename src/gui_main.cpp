@@ -20,18 +20,18 @@ void gui_setup(int argc, char **argv) {}
 void test();
 
 struct State {
-    std::optional<User> user = {};
+    std::optional<Backend> backend;
 };
 
 State state;
 
 void gui_loop() {
 
-    if (!state.user) {
-        state.user = login();
+    if (!state.backend) {
+        state.backend = login();
     } 
 
-    if (state.user) {
+    if (state.backend) {
         assignments();
         questions();
     }

@@ -1,12 +1,5 @@
 #include <string>
 #include <optional>
+#include "backend.hpp"
 
-
-struct User {
-    std::string username;
-    std::string password;
-    bool is_admin;
-};
-
-
-std::optional<User> login();
+std::optional<Backend> login();
